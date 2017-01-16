@@ -1,1 +1,43 @@
-"Yay! You’re on Rails!"
+
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Aimee Bachari</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <%= form_for @contact do |f| %>
+      <ul class="menu">
+        <li>
+          <%= f.text_field :name, placeholder: 'Name'%>
+        </li>
+        <li>
+          <%= f.text_field :email, placeholder: 'Email'%>
+        </li>
+        <li>
+          <%= f.submit "Get in Touch", class: 'button' %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</div>
+
+<% if flash[:notice] %>
+  <div class="callout success">
+    <%= flash[:notice] %>
+  </div>
+<% elsif flash[:alert] %>
+  <div class="callout alert">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
+About Me
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+
+Professional Experience
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+
+Links
