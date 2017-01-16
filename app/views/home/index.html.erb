@@ -1,13 +1,41 @@
-
-<div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Aimee Bachari</li>
+<div class="row container">
+  <div class="columns large-2 small-6">
+    <h3>Connect</h3>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/aimeebachari" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/aimeebachari" target="_blank">GitHub</a></li>
+      <li><a href="https://twitter.com/aimee_bachari" target="_blank">Twitter</a></li>
     </ul>
   </div>
-  <div class="top-bar-right">
+
+  <div class="columns large-4 small-6">
+    <%= image_tag "aimeebachari.jpg", class: 'portrait' %>
+  </div>
+
+  <div class="columns large-6 small-12">
+    <h3>About Aimee Bachari</h3>
+    <p>I want to find the hardest problems and solve them.</p>
+
+    <p>I became interested in programming when tasked with creating a website and e-commerce experience for the Houston History Magazine while in graduate school (www.houstonhistorymagazine.org). I was more enthusiastic than I expected. Creating the website with WordPress made things easy,  but I found myself obsessed with questions about how it all worked. Since I already enjoyed puzzles and playing games like Sudoku and Solitaire, I thought I might have a knack for programming. It turns out, I do!</p>
+  </div>
+</div>
+
+<hr>
+
+<div class="row container">
+  <div class="columns large-2 small-6">
+    <h3>Interests</h3>
+    <ul>
+      <li><a href="http://8thwonderbrew.com/" target="_blank">My Friend's Brewery</a></li>
+      <li><a href="http://parl.org/adopt/adoptable-dogs" target="_blank">Adopt a Dog!</a></li>
+      <li><a href="https://houstonhistorymagazine.org/" target="_blank">Check out Houston History Magazine</a></li>
+    </ul>
+  </div>
+
+  <div class="columns large-6 small-12">
+    <h3>Who Are You?</h3>
     <%= form_for @contact do |f| %>
-      <ul class="menu">
+      <ul class="menu form">
         <li>
           <%= f.text_field :name, placeholder: 'Name'%>
         </li>
@@ -19,39 +47,14 @@
         </li>
       </ul>
     <% end %>
+    <% if flash[:notice] %>
+      <div class="callout success">
+        <%= flash[:notice] %>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class="callout alert">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
   </div>
-</div>
-
-
-<% if flash[:notice] %>
-  <div class="callout success">
-    <%= flash[:notice] %>
-  </div>
-<% elsif flash[:alert] %>
-  <div class="callout alert">
-    <%= flash[:alert] %>
-  </div>
-<% end %>
-
-<div class="row">
-  <div class="media-object">
-    <div class="media-object-section large-3 medium-6 small-12 columns">
-      <%= image_tag "aimeebachari.jpg", class: 'portrait' %>
-    </div>
-    <div class="media-object-section large-9 medium-6 small-12 columns">
-      <h3>About Me</h3>
-      <p>I want to find the hardest problems and solve them.</p>
-
-      <p>I became interested in programming when tasked with creating a website and e-commerce experience for the Houston History Magazine while in graduate school (www.houstonhistorymagazine.org). I was more enthusiastic than I expected. Creating the website with WordPress made things easy,  but I found myself obsessed with questions about how it all worked. Since I already enjoyed puzzles and playing games like Sudoku and Solitaire, I thought I might have a knack for programming. It turns out, I do!</p>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <h3>Connect</h3>
-  <ul>
-    <li><a href="https://www.linkedin.com/in/aimeebachari" target="_blank">LinkedIn</a></li>
-    <li><a href="https://github.com/aimeebachari" target="_blank">GitHub</a></li>
-    <li><a href="https://twitter.com/aimee_bachari" target="_blank">Twitter</a></li>
-  </ul>
 </div>

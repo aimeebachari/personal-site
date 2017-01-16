@@ -2,3 +2,26 @@
   width: 100%;
   max-width: 280px;
 }
+
+.container {
+  font-family: 'Trykker';
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.form {
+  padding-top: 30px;
+}
+
+h3 {
+  font-family: 'Trykker';
+}
+
+body {
+  background-color: #292C37;
+  color: white;
+}
+
+a {
+  color: white;
+}
